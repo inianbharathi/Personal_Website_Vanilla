@@ -17,6 +17,14 @@
             padding: 0px;
             overflow-x: hidden; 
         }
+        a {
+            color: whitesmoke;
+            text-decoration: none; /* no underline */
+            }
+        .mainLoginInput::-webkit-input-placeholder 
+        {
+            font-family: 'myFont', Arial, Helvetica, sans-serif;
+        }
       /* Navbar */
         .logo{            
             font-weight: bolder;
@@ -63,6 +71,7 @@
             .white-dash{
                 visibility: visible;
             }
+            
         }
         /* Hero */
         .hero{            
@@ -136,9 +145,7 @@
                 justify-content: center;
                 align-items: center;               
             } 
-           .footer-title{
-            padding: 20px 50px 10px;
-           }
+          
         }
         /* About */
         .about{
@@ -202,7 +209,7 @@
             color: rgb(0, 0, 0);
         }
        .contact-form{
-                width:35%;
+                width:50%;
                 margin:0px 30%;
                 font-size: 16px;
                 border-radius: 5px;
@@ -258,8 +265,9 @@
        .footer-title{
         color:whitesmoke;
         font-family: 'Roboto Condensed', sans-serif;
-        padding: 20px 30px 10px;
+        padding-top:20px;
         font-weight: bold;
+        text-align: center;
     }
     .social-icons{
         padding: 10px 20px;
@@ -271,7 +279,15 @@
         padding-right: 5%;
         padding-top: 20px;
     }
-              
+          
+    @media(max-width:720px){
+        .copyrights{
+            padding-right:0px;
+        }
+        .social-icons{
+            padding-bottom:10px;
+        }
+    }
     </style>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -289,20 +305,21 @@
             <img class="logo-pic" src="images/hero-icon.svg">             
         </div>         
         <ul class="list-items">
-            <li>PORTFOLIO</li>
-            <li>TECHNOLOGIES</li>
-            <li>CONTACT</li>
+            <li><a href="#">PORTFOLIO</a></li>
+            <li><a href="#technologies">TECHNOLOGIES</a></li>
+            <li><a href="#contact">CONTACT</a></li>
         </ul>
     </div>
 </div>
 <!-- Hero -->
 <div class="hero">
     <img src="images/profile-logo.svg" alt="hero-pic" class="hero-pic">      
-    <div class="hero-text">I AM A WEB DEVELOPER</div>
+    <div class="hero-text">I AM INIAN</div>
     <img src="images/shape-divider-white.svg" class="hero-divider">
-    <p style="color: whitesmoke; text-align: center; padding-bottom: 20px;">DIGITAL MARKETING MANAGER & CREATIVE LEAD</p>
+    <p style="color: whitesmoke; text-align: center; padding-bottom: 20px;">WEB DEVELOPER, DIGITAL MARKETEER & CREATIVE LEAD</p>
 </div>
 <!-- Portfolio -->
+<div id="technologies">
 <p class="portfolio-text">TECHNOLOGIES</p>
 <div class="port-center">
     <div class="portfolio">
@@ -313,6 +330,7 @@
     <img src="images/Node js.png"class="technologies"height="200px">
     <img src="images/Angular.png"class="technologies"height="200px">
     </div>
+</div>
 </div>
 <!-- About -->
 <div class="about">
@@ -326,6 +344,7 @@
 <button class="btn">Learn More</button></div>
 </div>
 <!-- Contact Me -->
+<div id="contact">
 <h2 class="contact-title">CONTACT</h2>
 <div class="contact">    
     <label class="text-label">Name :</label> 
@@ -339,6 +358,7 @@
     <div class="button">
     <button class="form-button">Send</button>
     </div>
+</div>
 </div>
 <!-- Footer -->
 <footer>
